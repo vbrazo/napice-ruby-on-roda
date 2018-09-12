@@ -14,4 +14,5 @@
 
 ### Feature Request
 
+- [PR #4](https://github.com/napice/napice-api/pull/4) Separate frontend and backend [@vbrazo](https://github.com/vbrazo)
 - [PR #3](https://github.com/napice/napice-api/pull/3) Set up project [@vbrazo](https://github.com/vbrazo)
