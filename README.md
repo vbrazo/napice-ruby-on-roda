@@ -22,52 +22,5 @@ bundle exec rackup -p 3000
 * CSRF and SESSION
 * TOKEN AUTH
 
-### Supported API Queries
-```
-{
-  all_posts {
-    id,
-    title,
-    body,
-    user {
-      id,
-      first_name
-    }
-    comments {
-      id,
-      body
-      user {
-        id,
-        first_name
-      }
-    }
-
-  }
- }
-```
-
-```
-{
-  post(id: 2) {
-    id,
-    title,
-    body,
-    user {
-      id,
-      first_name
-    }
-    comments {
-      id,
-      body
-      user {
-        id,
-        first_name
-      }
-    }
-
-  }
- }
- ```
-
 ### DB
 * Postgresql (with ruby Sequel ORM)

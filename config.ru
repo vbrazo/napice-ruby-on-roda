@@ -5,6 +5,9 @@ require 'bundler'
 require 'logger'
 Bundler.require
 
+require 'dotenv'
+Dotenv.load
+
 # Local config
 require "find"
 

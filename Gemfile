@@ -4,6 +4,7 @@ group :development do
   gem 'rake'
 end
 
+gem 'dotenv'
 gem 'unicorn'
 gem 'roda'
 gem 'tilt'
@@ -13,11 +14,10 @@ gem 'graphql'
 
 # Database Stack
 gem 'sequel'
-gem 'sequel-seed'
 gem 'sqlite3'
 gem 'colorize'
 
-gem 'pg'
+gem 'pg', '0.18.4'
 
 # Protection :)
 gem 'rack-protection'

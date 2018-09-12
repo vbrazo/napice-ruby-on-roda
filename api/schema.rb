@@ -3,9 +3,7 @@ QueryType = GraphQL::ObjectType.define do
   description "The query root of this schema"
 
   field :user do
-    type PostType
-    argument :id, !types.ID
-    resolve -> (obj, args, ctx) { Post.find(id: args["id"]) }
+    
   end
 end
 

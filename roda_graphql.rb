@@ -1,7 +1,5 @@
 require './api/schema'
 
-Dotenv.load
-
 class RodaGraphql < Roda
   use Rack::Session::Cookie, key: ENV['RACK_COOKIE_KEY'], secret: ENV['RACK_COOKIE_SECRET']
   use Rack::Protection
