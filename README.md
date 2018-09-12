@@ -1,6 +1,6 @@
-# Roda Graphql Server
+# [Napice](http://napice.com) Ruby API 
 
-### Setup and Running locally
+### Setup and Run locally the Roda Graphql Server
 
 ```bash
 git clone repo
@@ -17,10 +17,17 @@ bundle exec rackup -p 3000
 
 [Visit browser](http://localhost:3000)
 
-# Features
+## Features
+
 * Graphql API
 * CSRF and SESSION
 * TOKEN AUTH
 
-### DB
+## DB
+
 * Postgresql (with ruby Sequel ORM)
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/napice/napice-api/blob/master/CONTRIBUTING.md).
+
