@@ -20,7 +20,7 @@ gem 'colorize'
 gem 'pg', '0.18.4'
 
 # Protection :)
-gem 'rack-protection'
+gem 'rack-protection', '1.5.5'
 
 # Token :)
 gem 'rack-jwt'
