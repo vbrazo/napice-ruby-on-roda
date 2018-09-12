@@ -1,5 +1,6 @@
 # Load path and gems/bundler
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__))
+
 require 'tilt/erb'
 require 'bundler'
 require 'logger'
@@ -11,10 +12,10 @@ Dotenv.load
 # Local config
 require "find"
 
-%w{application/config/initializers application/api/graph/types application/api/graph/models application/middlewares}.each do |load_path|
-  Find.find(load_path) { |f|
-    require f unless f.match(/\/\..+$/) || File.directory?(f)
-  }
+%w{config/initializers api/graph/types api/graph/models middlewares}.each do |load_path|
+  Find.find(load_path) do |f|
+    require_relative f unless f.match(/\/\..+$/) || File.directory?(f)
+  end
 end
 
 logger = Logger.new(STDOUT)
@@ -33,5 +34,4 @@ end
 
 DB.loggers << logger if logger
 
-require './application/api/roda_graphql'
-run RodaGraphql
+require_relative './application/api/roda_graphql'

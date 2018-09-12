@@ -1,11 +1,11 @@
-require './api/schema'
+require_relative './graph/schema'
 
 class RodaGraphql < Roda
   use Rack::Session::Cookie, key: ENV['RACK_COOKIE_KEY'], secret: ENV['RACK_COOKIE_SECRET']
   use Rack::Protection
   use Rack::Protection::RemoteReferrer
   use PassAuthToken
-  use Rack::JWT::Auth, {secret: ENV['RACK_COOKIE_SECRET'], exclude: %w(/assets), options: { algorithm: 'HS256' }}
+  use Rack::JWT::Auth, {secret: ENV['RACK_COOKIE_SECRET'], options: { algorithm: 'HS256' }}
 
   plugin :environments
   self.environment = ENV['ENVIRONMENT']
@@ -18,8 +18,7 @@ class RodaGraphql < Roda
   plugin :assets
   plugin :multi_route
 
-  require './assets/assets'
+  require_relative './routes/main.rb'
 
-  require './api/routes/main.rb'
-  Dir['./routes/*.rb'].each{|f| require f}
+  Dir['./routes/*.rb'].each{ |f| require_relative f}
 end
