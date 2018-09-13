@@ -1,9 +1,8 @@
 QueryType = GraphQL::ObjectType.define do
-  name "Query"
-  description "The query root of this schema"
+  name 'Query'
+  description 'The query root of this schema'
 
   field :user do
-    
   end
 end
 

@@ -5,7 +5,7 @@ class RodaGraphql < Roda
   use Rack::Protection
   use Rack::Protection::RemoteReferrer
   use PassAuthToken
-  use Rack::JWT::Auth, {secret: ENV['RACK_COOKIE_SECRET'], options: { algorithm: 'HS256' }}
+  use Rack::JWT::Auth, secret: ENV['RACK_COOKIE_SECRET'], options: { algorithm: 'HS256' }
 
   plugin :environments
   self.environment = ENV['ENVIRONMENT']

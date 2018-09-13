@@ -1,5 +1,5 @@
 # Load path and gems/bundler
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__))
+$LOAD_PATH << __dir__
 
 require 'tilt/erb'
 require 'bundler'
@@ -11,7 +11,7 @@ Dotenv.load
 
 file_path = File.dirname(__FILE__)
 
-%w{config/initializers api/graph/types api/models middlewares}.each do |path|
+%w(config/initializers api/graph/types api/models middlewares).each do |path|
   Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
 end
 
