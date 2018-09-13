@@ -4,35 +4,28 @@ group :development do
   gem 'rake'
 end
 
-gem 'dotenv'
-gem 'unicorn'
-gem 'roda'
-gem 'tilt'
-
-gem 'graphql'
-
-gem 'sequel'
 gem 'colorize'
-
+gem 'dotenv'
+gem 'graphql'
 gem 'pg', '0.18.4'
-
-# Protection :)
 gem 'rack-protection', '1.5.5'
-
-# Token :)
 gem 'rack-jwt'
-
+gem 'roda'
+gem 'sequel'
 gem 'simplecov'
+gem 'tilt'
+gem 'unicorn'
 
-group :development, :test, :'test-staging' do
+group :development, :test do
   gem 'awesome_print', '1.8.0'
   gem 'pry', '0.11.3'
+  gem 'rubocop'
 end
 
 group :test, :'test-staging' do
-  gem 'rspec_sequel_matchers', '0.4.0'
   gem 'factory_bot', '4.8.2'
   gem 'faker', '1.8.7'
   gem 'rack-test', '1.0.0'
   gem 'rspec', '3.7.0'
+  gem 'rspec_sequel_matchers', '0.4.0'
 end
