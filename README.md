@@ -1,4 +1,4 @@
-# [Napice](http://napice.com) Ruby API [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/test_coverage)](https://codeclimate.com/github/Napice/napice-ruby/test_coverage)
+# [Napice](http://napice.com) Ruby API [![Build Status](https://travis-ci.org/Napice/napice-ruby.svg?branch=master)](https://travis-ci.org/Napice/napice-ruby) [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/test_coverage)](https://codeclimate.com/github/Napice/napice-ruby/test_coverage)
 
 ### Setup and Run locally the Roda Graphql Server
 
