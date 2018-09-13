@@ -1,21 +1,22 @@
 # [Napice](http://napice.com) Ruby API [![Build Status](https://travis-ci.org/Napice/napice-ruby.svg?branch=master)](https://travis-ci.org/Napice/napice-ruby) [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/test_coverage)](https://codeclimate.com/github/Napice/napice-ruby/test_coverage)
 
-### Setup and Run locally the Roda Graphql Server
+This is the Napice API.
 
-```bash
-git clone repo
-cd to folder
-bundle install
-# make sure postgres is installed
-createdb roda_graphql
-bundle exec rake db:migrate
-bundle exec rake db:seed
-# run the server
-bundle exec rackup -p 3000
-# Visit http://localhost:3000
-```
+## Development
 
-[Visit browser](http://localhost:3000)
+### Install the database
+
+You can install the database by running `make build_database`
+
+### Install the dependencies and run specs
+
+After checking out the repo, run `make install` to install dependencies. Then, run `bundle exec rspec spec` to run the tests.
+
+### Launch the console
+
+You can use the application programmatically by installing the gem and using on the Ruby environment (You can run `make console` for this)
+
+## Project details
 
 ## Features
 
@@ -31,3 +32,6 @@ bundle exec rackup -p 3000
 
 See [CONTRIBUTING.md](https://github.com/napice/napice-api/blob/master/CONTRIBUTING.md).
 
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
