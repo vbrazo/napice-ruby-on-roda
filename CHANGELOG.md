@@ -14,5 +14,6 @@
 
 ### Feature Request
 
-- [PR #4](https://github.com/napice/napice-api/pull/4) Separate frontend and backend [@vbrazo](https://github.com/vbrazo)
+- [PR #6](https://github.com/napice/napice-api/pull/6) Add test suite and Code Climate [@vbrazo](https://github.com/vbrazo)
+- [PR #5](https://github.com/napice/napice-api/pull/5) Separate frontend and backend [@vbrazo](https://github.com/vbrazo)
 - [PR #3](https://github.com/napice/napice-api/pull/3) Set up project [@vbrazo](https://github.com/vbrazo)
