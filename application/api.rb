@@ -9,9 +9,10 @@ Bundler.require
 require 'dotenv'
 Dotenv.load
 
-Dir["#{File.dirname(__FILE__)}/config/initializers/**/*.rb"].each { |file| require file }
-Dir["#{File.dirname(__FILE__)}/api/graph/types/**/*.rb"].each { |file| require file }
-Dir["#{File.dirname(__FILE__)}/api/models/**/*.rb"].each { |file| require file }
-Dir["#{File.dirname(__FILE__)}/middlewares/**/*.rb"].each { |file| require file }
+file_path = File.dirname(__FILE__)
+
+%w{config/initializers api/graph/types api/models middlewares}.each do |path|
+  Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
+end
 
 require './application/api/roda_graphql'

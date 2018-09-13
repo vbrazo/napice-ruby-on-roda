@@ -23,7 +23,6 @@ RSpec.configure do |config|
   
   config.disable_monkey_patching!
   config.filter_run_excluding :slow
-  config.tty = true
   
   config.expect_with :rspec do |c|
     c.syntax = :expect
