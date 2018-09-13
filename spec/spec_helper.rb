@@ -18,8 +18,8 @@ require 'rspec_sequel_matchers'
 Faker::Config.locale = 'en-US'
 
 RSpec.configure do |config|
-  config.include RspecSequel::Matchers
   config.include FactoryBot::Syntax::Methods
+  config.include RspecSequel::Matchers
   
   config.disable_monkey_patching!
   config.filter_run_excluding :slow
