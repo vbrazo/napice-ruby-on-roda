@@ -14,7 +14,6 @@ gem 'graphql'
 gem 'sequel'
 gem 'colorize'
 
-gem 'sqlite3'
 gem 'pg', '0.18.4'
 
 # Protection :)
