@@ -2,7 +2,7 @@ require 'dotenv'
 Dotenv.load
 
 require 'sequel'
-require_relative './application/config/initializers/database.rb'
+require_relative './application/config/database.rb'
 
 namespace :bundler do
   task :setup do
