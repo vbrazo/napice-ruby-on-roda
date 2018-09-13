@@ -10,14 +10,8 @@
 /test/version_tmp/
 /tmp/
 
-.env
-
-pg_upgrade_internal.log
-pg_upgrade_server.log
-pg_upgrade_utility.log
-
 # Used by dotenv library to load environment variables.
-# .env
+.env*
 
 ## Specific to RubyMotion:
 .dat*
