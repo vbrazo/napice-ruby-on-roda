@@ -8,7 +8,7 @@ namespace :db do
   desc "Run all migrations in db/migrate"
   task :migrate => :connect do
     Sequel.extension(:migration)
-    Sequel::Migrator.apply(DB, "db/migrate")
+    Sequel::Migrator.apply(DB, "application/db/migrate")
   end
 
   task :connect => :environment do
