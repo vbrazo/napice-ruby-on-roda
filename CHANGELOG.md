@@ -6,6 +6,9 @@
 ### Bug/Fixes
 - [PR #4](https://github.com/napice/napice-api/pull/4) Upgrade rack protection gem [@vbrazo](https://github.com/vbrazo)
 
+### Chores
+- [PR #10](https://github.com/napice/napice-api/pull/10) Remove tilt, colorize and unicorn gems [@vbrazo](https://github.com/vbrazo)
+
 ### Documentation
 - [PR #2](https://github.com/napice/napice-api/pull/2) Add contributing.md [@vbrazo](https://github.com/vbrazo)
 - [PR #1](https://github.com/napice/napice-api/pull/1) Add changelog.md [@vbrazo](https://github.com/vbrazo)
