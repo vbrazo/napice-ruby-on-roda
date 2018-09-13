@@ -33,6 +33,7 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    puma (3.12.0)
     rack (1.6.4)
     rack-jwt (0.3.0)
       jwt (~> 1.5.2)
@@ -91,6 +92,7 @@ DEPENDENCIES
   graphql
   pg (= 0.18.4)
   pry (= 0.11.3)
+  puma
   rack-jwt
   rack-protection (= 1.5.5)
   rack-test (= 1.0.0)
