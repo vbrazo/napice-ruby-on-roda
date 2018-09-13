@@ -16,8 +16,5 @@ class RodaGraphql
         result.to_json
       end
     end
-
-    r.assets
-    r.multi_route
   end
 end

@@ -20,7 +20,7 @@ group :development, :test do
   gem 'rubocop'
 end
 
-group :test, :'test-staging' do
+group :test do
   gem 'factory_bot', '4.8.2'
   gem 'faker', '1.8.7'
   gem 'rack-test', '1.0.0'
