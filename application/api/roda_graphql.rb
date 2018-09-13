@@ -15,10 +15,9 @@ class RodaGraphql < Roda
   plugin :json_parser
   plugin :render, engine: 'erb'
   plugin :view_options
-  plugin :assets
   plugin :multi_route
 
   require_relative './routes/main.rb'
 
-  Dir['./routes/*.rb'].each{ |f| require_relative f}
+  Dir['./routes/*.rb'].each { |f| require f }
 end
