@@ -8,7 +8,7 @@ class PassAuthToken
   end
 
   def call(env)
-    data = { user_id: 1 } # Anything you want to encode
+    data = {}
     token = Rack::JWT::Token.encode(data, ENV['RACK_COOKIE_SECRET'], 'HS256')
     env['HTTP_AUTHORIZATION'] = "Bearer #{token}" if env['REQUEST_PATH'] == '/'
     @app.call(env)

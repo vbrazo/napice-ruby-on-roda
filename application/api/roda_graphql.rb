@@ -8,16 +8,10 @@ class RodaGraphql < Roda
   use Rack::JWT::Auth, secret: ENV['RACK_COOKIE_SECRET'], options: { algorithm: 'HS256' }
 
   plugin :environments
-  self.environment = ENV['ENVIRONMENT']
-
-  plugin :flash
   plugin :json
   plugin :json_parser
-  plugin :render, engine: 'erb'
-  plugin :view_options
-  plugin :multi_route
+
+  self.environment = ENV['ENVIRONMENT']
 
   require_relative './routes/main.rb'
-
-  Dir['./routes/*.rb'].each { |f| require f }
 end

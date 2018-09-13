@@ -1,10 +1,7 @@
 class RodaGraphql
   route do |r|
     r.root do
-      data = { user_id: 1 }
-      token = Rack::JWT::Token.encode(data, ENV['RACK_COOKIE_SECRET'], 'HS256')
-      set_layout_locals token: token
-      view('index')
+      'Nothing Here'
     end
 
     r.on 'graphql' do
@@ -19,8 +16,5 @@ class RodaGraphql
         result.to_json
       end
     end
-
-    r.assets
-    r.multi_route
   end
 end

@@ -1,20 +1,18 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem 'rake'
+  gem 'rake', '11.2.2'
 end
 
-gem 'colorize'
-gem 'dotenv'
-gem 'graphql'
+gem 'dotenv', '2.5.0'
+gem 'graphql', '0.15.2'
 gem 'pg', '0.18.4'
-gem 'rack-jwt'
+gem 'puma', '3.12.0'
+gem 'rack-jwt', '0.3.0'
 gem 'rack-protection', '1.5.5'
-gem 'roda'
-gem 'sequel'
-gem 'simplecov'
-gem 'tilt'
-gem 'unicorn'
+gem 'roda', '2.15.0'
+gem 'sequel', '4.35.0'
+gem 'simplecov', '0.16.1'
 
 group :development, :test do
   gem 'awesome_print', '1.8.0'
@@ -22,7 +20,7 @@ group :development, :test do
   gem 'rubocop'
 end
 
-group :test, :'test-staging' do
+group :test do
   gem 'factory_bot', '4.8.2'
   gem 'faker', '1.8.7'
   gem 'rack-test', '1.0.0'

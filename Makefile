@@ -9,6 +9,7 @@ console:
 install:
 	bundle config path .bundle
 	bundle
+	touch .env
 	touch .env.test
 	touch .env.development
 

@@ -6,7 +6,7 @@ We love pull requests. Here's a quick guide:
 
 3. Please add a test for your change. Only refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, we need a test! We use [Rspec](http://rspec.info/) in this project.
 
-4. We care about code coverage and use `SimpleCov` to analyze the code and generate test coverage reports.
+4. We care about code coverage and use `SimpleCov` to analyze the code and generate test coverage reports. If you want to see the report, just run `open coverage/index.html` in your terminal.
 
 5. Push to your fork and submit a pull request.
 
