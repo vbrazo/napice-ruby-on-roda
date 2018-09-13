@@ -9,29 +9,10 @@ Bundler.require
 require 'dotenv'
 Dotenv.load
 
-# Local config
-require "find"
+file_path = File.dirname(__FILE__)
 
-%w{config/initializers api/graph/types api/graph/models middlewares}.each do |load_path|
-  Find.find(load_path) do |f|
-    require_relative f unless f.match(/\/\..+$/) || File.directory?(f)
-  end
+%w{config/initializers api/graph/types api/models middlewares}.each do |path|
+  Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
 end
 
-logger = Logger.new(STDOUT)
-
-logger.level = Logger::DEBUG
-logger.formatter = proc do |severity, datetime, progname, msg|
-  date_format = datetime.strftime("%Y-%m-%d %H:%M:%S")
-  if severity == "INFO"
-    "[#{date_format}] #{severity}  (#{progname}): #{msg}\n".blue
-  elsif severity == "WARN"
-    "[#{date_format}] #{severity}  (#{progname}): #{msg}\n".orange
-  else
-    "[#{date_format}] #{severity} (#{progname}): #{msg}\n".red
-  end
-end
-
-DB.loggers << logger if logger
-
-require_relative './application/api/roda_graphql'
+require './application/api/roda_graphql'
