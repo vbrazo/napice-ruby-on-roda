@@ -4,7 +4,6 @@ group :development do
   gem 'rake'
 end
 
-gem 'colorize'
 gem 'dotenv'
 gem 'graphql'
 gem 'pg', '0.18.4'
@@ -13,8 +12,6 @@ gem 'rack-protection', '1.5.5'
 gem 'roda'
 gem 'sequel'
 gem 'simplecov'
-gem 'tilt'
-gem 'unicorn'
 
 group :development, :test do
   gem 'awesome_print', '1.8.0'

@@ -26,8 +26,6 @@ You can use the application programmatically via Ruby environment. You can run `
 
 Run `bundle exec rspec spec` to see our tests.
 
-## Project details
-
 ## Built With
 
 * PostgreSQL (with ruby Sequel ORM)

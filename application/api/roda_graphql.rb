@@ -13,8 +13,6 @@ class RodaGraphql < Roda
   plugin :flash
   plugin :json
   plugin :json_parser
-  plugin :render, engine: 'erb'
-  plugin :view_options
   plugin :multi_route
 
   require_relative './routes/main.rb'

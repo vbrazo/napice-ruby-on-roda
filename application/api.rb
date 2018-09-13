@@ -1,7 +1,6 @@
 # Load path and gems/bundler
 $LOAD_PATH << __dir__
 
-require 'tilt/erb'
 require 'bundler'
 require 'logger'
 Bundler.require
