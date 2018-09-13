@@ -11,6 +11,7 @@
 - [PR #1](https://github.com/napice/napice-api/pull/1) Add changelog.md [@vbrazo](https://github.com/vbrazo)
 
 ### Feature Request
+- [PR #8](https://github.com/napice/napice-api/pull/8) Add rubocop [@vbrazo](https://github.com/vbrazo)
 - [PR #7](https://github.com/napice/napice-api/pull/7) Add travis CI [@vbrazo](https://github.com/vbrazo)
 - [PR #6](https://github.com/napice/napice-api/pull/6) Add test suite and Code Climate [@vbrazo](https://github.com/vbrazo)
 - [PR #5](https://github.com/napice/napice-api/pull/5) Separate frontend and backend [@vbrazo](https://github.com/vbrazo)
