@@ -86,23 +86,23 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print (= 1.8.0)
-  dotenv
+  dotenv (= 2.5.0)
   factory_bot (= 4.8.2)
   faker (= 1.8.7)
-  graphql
+  graphql (= 0.15.2)
   pg (= 0.18.4)
   pry (= 0.11.3)
-  puma
-  rack-jwt
+  puma (= 3.12.0)
+  rack-jwt (= 0.3.0)
   rack-protection (= 1.5.5)
   rack-test (= 1.0.0)
-  rake
-  roda
+  rake (= 11.2.2)
+  roda (= 2.15.0)
   rspec (= 3.7.0)
   rspec_sequel_matchers (= 0.4.0)
   rubocop
-  sequel
-  simplecov
+  sequel (= 4.35.0)
+  simplecov (= 0.16.1)
 
 BUNDLED WITH
    1.16.4
