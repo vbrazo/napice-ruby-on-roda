@@ -19,35 +19,27 @@ RSpec.describe UserMutations do
       }
     }"
   end
+  let(:id) { { id: 0 } }
   let(:input) do
     {
       first_name: first_name,
       last_name: last_name,
       username: username,
-      email: email,
-      columns: {
-        success: nil
-      }
+      email: email
     }
   end
   let(:result) do
-    Schema.execute(
-      query_string,
-      context: { current_user: double }
-    )
+    Schema.execute(query_string, context: { current_user: double })
   end
-  let(:id) { { id: 0 } }
 
   context 'with valid params' do
-    let(:result_data) { { data: { createUser: { success: true } } }.deep_stringify_keys }
+    let(:result_data) { { data: { create_user: id } }.deep_stringify_keys }
 
     before do
-      expect(Api::Operations::User::Create).to receive(:new) do |_ctx, args|
-        expect(args).to match(input)
-      end.and_return(id)
+      expect(Api::Models::User).to receive(:create).with(input).and_return(id)
     end
 
-    it 'invokes the User::create operation' do
+    it 'invokes the User::Create operation' do
       expect(result).to match(result_data)
     end
   end

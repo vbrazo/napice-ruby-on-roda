@@ -12,6 +12,6 @@ module UserMutations
     # Define return parameters
     return_field :id, types.Int
 
-    resolve -> (_obj, args, _ctx) { Api::Operations::User::Create.new(args) }
+    resolve -> (obj, args, ctx) { Api::Operations::User::Create.new(args).create }
   end
 end
