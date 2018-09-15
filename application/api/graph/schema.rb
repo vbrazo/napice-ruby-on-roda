@@ -1,9 +1,14 @@
-QueryType = GraphQL::ObjectType.define do
-  name 'Query'
-  description 'The query root of this schema'
+Dir['./lib/gem_ext/graphql/**/*.rb'].each { |rb| require rb }
 
-  field :user do
-  end
+file_path = File.dirname(__FILE__)
+
+%w(fields mutations amutations types).each do |path|
+  Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
 end
 
-Schema = GraphQL::Schema.new(query: QueryType)
+require 'graphql'
+
+Schema = GraphQL::Schema.define do
+  query QueryType
+  mutation MutationType
+end

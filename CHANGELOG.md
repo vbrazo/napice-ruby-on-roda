@@ -1,7 +1,7 @@
 # Changelog
 
 ## HEAD Unreleased
-### Latest update: 2018-09-13
+### Latest update: 2018-09-15
 
 ### Bug/Fixes
 - [PR #4](https://github.com/napice/napice-api/pull/4) Upgrade rack protection gem [@vbrazo](https://github.com/vbrazo)
@@ -11,6 +11,7 @@
 - [PR #1](https://github.com/napice/napice-api/pull/1) Add changelog.md [@vbrazo](https://github.com/vbrazo)
 
 ### Feature Request
+- [PR #11](https://github.com/napice/napice-api/pull/11) Add CreateUser GraphQL endpoint [@vbrazo](https://github.com/vbrazo)
 - [PR #10](https://github.com/napice/napice-api/pull/10) Remove tilt and colorize. Add puma gem [@vbrazo](https://github.com/vbrazo)
 - [PR #9](https://github.com/napice/napice-api/pull/9) Add Makefile [@vbrazo](https://github.com/vbrazo)
 - [PR #8](https://github.com/napice/napice-api/pull/8) Add rubocop [@vbrazo](https://github.com/vbrazo)

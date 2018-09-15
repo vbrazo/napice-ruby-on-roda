@@ -10,8 +10,8 @@ Dotenv.load
 
 file_path = File.dirname(__FILE__)
 
-%w(config api/graph/types api/models middlewares).each do |path|
+%w(config api/graph/schema api/models api/operations).each do |path|
   Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
 end
 
-require './application/api/roda_graphql'
+require './application/api/api_support'

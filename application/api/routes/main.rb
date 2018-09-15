@@ -1,4 +1,4 @@
-class RodaGraphql
+class ApiSupport
   route do |r|
     r.root do
       'Nothing Here'

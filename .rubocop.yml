@@ -7,6 +7,9 @@ Metrics/MethodLength:
 Metrics/AbcSize:
   Max: 20
 
+Metrics/BlockLength:
+  Enabled: false
+
 Layout/SpaceBeforeSemicolon:
   Enabled: false
 
