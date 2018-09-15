@@ -1,3 +1,3 @@
 require './application/api'
 
-run RodaGraphql
+run Rack::Cascade.new [ApiSupport]

@@ -10,7 +10,7 @@ gem 'pg', '0.18.4'
 gem 'puma', '3.12.0'
 gem 'rack-jwt', '0.3.0'
 gem 'rack-protection', '1.5.5'
-gem 'roda', '2.15.0'
+gem 'roda', '~> 2.26.0'
 gem 'sequel', '4.35.0'
 gem 'simplecov', '0.16.1'
 
