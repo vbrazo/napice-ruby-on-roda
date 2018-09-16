@@ -12,6 +12,7 @@ gem 'rack-jwt', '0.3.0'
 gem 'rack-protection', '1.5.5'
 gem 'roda', '~> 2.26.0'
 gem 'sequel', '4.35.0'
+gem 'simple_oauth'
 gem 'simplecov', '0.16.1'
 
 group :development, :test do
