@@ -15,11 +15,6 @@ class Request < Rack::Auth::AbstractRequest
     end
   end
 
-  def request_condition
-    !oauth? || params[:consumer_key].nil? ||
-      params[:signature].nil? || params[:signature_method].nil?
-  end
-
   def verify_signature(client)
     return false unless client
 
@@ -36,6 +31,11 @@ class Request < Rack::Auth::AbstractRequest
   end
 
   private
+
+  def request_condition
+    !oauth? || params[:consumer_key].nil? ||
+      params[:signature].nil? || params[:signature_method].nil?
+  end
 
   def unauthorized
     [401, {}, ['Unauthorized!']]
