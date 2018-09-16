@@ -7,6 +7,7 @@ SimpleCov.start do
   add_filter '/spec/'
 end
 
+# Require gems and files
 require 'rspec/core'
 require 'rack/test'
 require './application/api'
@@ -14,9 +15,13 @@ require 'faker'
 require 'factory_bot'
 require 'rspec_sequel_matchers'
 
+# Set locale en-US for faker
 Faker::Config.locale = 'en-US'
 
-# This is necessary to test a cascading rack app
+# Require files inside the support folder
+Dir[File.expand_path('support/**/*', __dir__)].each { |f| require f }
+
+# Necessary to test a cascading rack app and middleware
 module RSpecHelpers
   include Rack::Test::Methods
 
@@ -31,10 +36,6 @@ module RSpecHelpers
   def response_body
     JSON.parse(last_response.body, symbolize_names: true)
   end
-
-  def set_request_headers
-    header 'Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization, Token'
-  end
 end
 
 # FactoryBot is expecting ActiveRecord
@@ -44,6 +45,7 @@ module Sequel
   end
 end
 
+# Set up rspec basic configurations
 RSpec.configure do |config|
   config.extend RSpecHelpers
   config.include RSpecHelpers

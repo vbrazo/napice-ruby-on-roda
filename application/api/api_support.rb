@@ -4,6 +4,7 @@ class ApiSupport < Roda
   use Rack::Session::Cookie, key: ENV['RACK_COOKIE_KEY'], secret: ENV['RACK_COOKIE_SECRET']
   use Rack::Protection
   use Rack::Protection::RemoteReferrer
+  use PassAuthToken
   use Rack::JWT::Auth, secret: ENV['RACK_COOKIE_SECRET'], options: { algorithm: 'HS256' }
 
   plugin :environments
