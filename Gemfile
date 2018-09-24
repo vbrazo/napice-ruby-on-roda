@@ -6,6 +6,7 @@ end
 
 gem 'dotenv', '2.5.0'
 gem 'graphql', '1.6.6'
+gem 'jwt', '1.5.6'
 gem 'pg', '0.18.4'
 gem 'puma', '3.12.0'
 gem 'rack-jwt', '0.3.0'
