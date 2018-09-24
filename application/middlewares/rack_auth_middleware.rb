@@ -19,10 +19,10 @@ class RackAuthMiddleware
 
   def authenticate(env)
     return true unless authenticate_condition(env)
-    
+
     JWT.decode(token(env), ENV['JWT_TOKEN'], true, algorithm: 'HS256')
 
-    return true
+    true
   rescue JWT::ExpiredSignature
     authenticate_error(type: :token_expired, message: 'JWT token expired')
   rescue JWT::DecodeError
