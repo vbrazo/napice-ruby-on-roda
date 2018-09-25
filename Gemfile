@@ -8,11 +8,9 @@ gem 'dotenv', '2.5.0'
 gem 'graphql', '1.6.6'
 gem 'pg', '0.18.4'
 gem 'puma', '3.12.0'
-gem 'rack-jwt', '0.3.0'
 gem 'rack-protection', '1.5.5'
 gem 'roda', '~> 2.26.0'
 gem 'sequel', '4.35.0'
-gem 'simple_oauth'
 gem 'simplecov', '0.16.1'
 
 group :development, :test do

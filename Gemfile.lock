@@ -22,7 +22,6 @@ GEM
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.1)
     json (2.1.0)
-    jwt (1.5.6)
     method_source (0.9.0)
     minitest (5.11.3)
     parallel (1.12.1)
@@ -35,9 +34,6 @@ GEM
       method_source (~> 0.9.0)
     puma (3.12.0)
     rack (2.0.5)
-    rack-jwt (0.3.0)
-      jwt (~> 1.5.2)
-      rack (>= 1.6.0)
     rack-protection (1.5.5)
       rack
     rack-test (1.0.0)
@@ -71,7 +67,6 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.10.0)
     sequel (4.35.0)
-    simple_oauth (0.3.1)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -94,7 +89,6 @@ DEPENDENCIES
   pg (= 0.18.4)
   pry (= 0.11.3)
   puma (= 3.12.0)
-  rack-jwt (= 0.3.0)
   rack-protection (= 1.5.5)
   rack-test (= 1.0.0)
   rake (= 11.2.2)
@@ -103,7 +97,6 @@ DEPENDENCIES
   rspec_sequel_matchers (= 0.4.0)
   rubocop
   sequel (= 4.35.0)
-  simple_oauth
   simplecov (= 0.16.1)
 
 BUNDLED WITH

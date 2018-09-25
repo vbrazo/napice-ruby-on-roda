@@ -11,6 +11,7 @@
 - [PR #1](https://github.com/napice/napice-api/pull/1) Add changelog.md [@vbrazo](https://github.com/vbrazo)
 
 ### Feature Request
+- [PR #13](https://github.com/napice/napice-api/pull/13) Add RackAuthMiddleware and jwt [@vbrazo](https://github.com/vbrazo)
 - [PR #12](https://github.com/napice/napice-api/pull/12) Add Rack Middleware and SimpleOauth [@vbrazo](https://github.com/vbrazo)
 - [PR #11](https://github.com/napice/napice-api/pull/11) Add CreateUser GraphQL endpoint [@vbrazo](https://github.com/vbrazo)
 - [PR #10](https://github.com/napice/napice-api/pull/10) Remove tilt and colorize. Add puma gem [@vbrazo](https://github.com/vbrazo)
