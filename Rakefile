@@ -8,8 +8,6 @@ require 'bundler'
 require 'bundler/setup'
 
 if current_task['db:']
-  require 'sequel'
-  $LOAD_PATH.unshift(File.expand_path('./application/lib'))
   require 'config/sequel'
   require 'config/database'
 end

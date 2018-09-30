@@ -3,6 +3,9 @@
 ## HEAD Unreleased
 ### Latest update: 2018-09-30
 
+------------------------------------------------------------------------------
+## v0.0.1 (2018-09-30)
+
 ### Bug/Fixes
 - [PR #4](https://github.com/napice/napice-api/pull/4) Upgrade rack protection gem [@vbrazo](https://github.com/vbrazo)
 
