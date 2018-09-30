@@ -29,7 +29,6 @@ To run the API tests, you should run `bundle exec rspec spec`.
 ## Built With
 
 * PostgreSQL (with ruby Sequel ORM)
-* GraphQL API
 * Rspec
 * Faker
 * FactoryBot

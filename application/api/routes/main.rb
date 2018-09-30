@@ -4,17 +4,23 @@ class ApiSupport
       'Nothing Here'
     end
 
-    r.on 'graphql' do
-      r.post do
-        params = JSON.parse(request.body.read)
-        result = Schema.execute(
-          params['query'],
-          variables: params['variables']
-        )
+    r.on 'user' do
+      r.on 'create' do
+        r.post do
+          params = format_params
 
-        response['Content-Type'] = 'application/json; charset=utf-8'
-        result.to_json
+          create_user_operation = Api::Operations::User::Create.new(params['query'])
+          result = create_user_operation.create
+
+          result.to_json
+        end
       end
     end
+  end
+
+  def format_params
+    request.params
+  rescue StandardError
+    JSON.parse(request.body.read)
   end
 end

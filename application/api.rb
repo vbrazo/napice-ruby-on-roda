@@ -8,11 +8,9 @@ Bundler.require
 require 'dotenv'
 Dotenv.load
 
-require 'jwt'
-
 file_path = File.dirname(__FILE__)
 
-%w(config middlewares api/graph/schema api/models api/operations).each do |path|
+%w(config middlewares api/models api/operations).each do |path|
   Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
 end
 
