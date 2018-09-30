@@ -1,14 +1,14 @@
 Sequel.migration do
   up do
-    create_table(:user) do
+    create_table(:skill) do
       primary_key :id
-      String :email, null: false
+      String :name, null: false
       DateTime :created_at
       DateTime :updated_at
     end
   end
 
   down do
-    drop_table(:user)
+    drop_table(:skill)
   end
 end
