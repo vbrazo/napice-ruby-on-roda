@@ -16,9 +16,6 @@ class Api
 
         def user_hash
           {
-            first_name: args['first_name'],
-            last_name: args['last_name'],
-            username: args['username'],
             email: args['email']
           }
         end
