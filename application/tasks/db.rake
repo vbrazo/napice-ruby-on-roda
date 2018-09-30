@@ -14,4 +14,11 @@ namespace :db do
     Sequel::Migrator.run(DB, 'application/db/migrations')
     Rake::Task['db:version'].execute
   end
+
+  desc 'Remove all database tables and re-run migrations'
+  task :reset do
+    DB.tables.each { |table| DB.drop_table table.to_sym }
+
+    Rake::Task['db:migrate'].execute
+  end
 end
