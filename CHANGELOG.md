@@ -11,6 +11,7 @@
 - [PR #1](https://github.com/napice/napice-api/pull/1) Add changelog.md [@vbrazo](https://github.com/vbrazo)
 
 ### Feature Request
+- [PR #16](https://github.com/napice/napice-api/pull/16) Add MVP schema [@vbrazo](https://github.com/vbrazo)
 - [PR #15](https://github.com/napice/napice-api/pull/15) Set up initial rake tasks [@vbrazo](https://github.com/vbrazo)
 - [PR #14](https://github.com/napice/napice-api/pull/14) Add RackAuthMiddleware and jwt [@vbrazo](https://github.com/vbrazo)
 - [PR #13](https://github.com/napice/napice-api/pull/13) Add CreateUser endpoint workflow spec [@vbrazo](https://github.com/vbrazo)
