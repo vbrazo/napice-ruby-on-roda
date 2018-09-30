@@ -3,7 +3,6 @@ namespace :db do
   task :migrate do
     Sequel.extension :migration, :core_extensions
     Sequel::Migrator.run(DB, 'application/db/migrations')
-    Rake::Task['db:version'].execute
   end
 
   desc 'Generates a new timestamped Sequel migration'
