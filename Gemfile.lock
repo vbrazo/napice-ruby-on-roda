@@ -93,7 +93,7 @@ DEPENDENCIES
   rack-test (= 1.0.0)
   rake (= 12.3.1)
   roda (~> 2.26.0)
-  roda-basic-auth
+  roda-basic-auth (~> 0.1.1)
   rspec (= 3.7.0)
   rspec_sequel_matchers (= 0.4.0)
   rubocop
