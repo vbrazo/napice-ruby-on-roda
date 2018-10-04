@@ -3,8 +3,8 @@ class ApiSupport < Roda
   use Rack::Protection
   use Rack::Protection::RemoteReferrer
 
-  plugin :basic_auth
   plugin :environments
+  plugin :http_auth
   plugin :json
   plugin :json_parser
 
