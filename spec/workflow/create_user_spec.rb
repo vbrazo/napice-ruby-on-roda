@@ -11,7 +11,6 @@ RSpec.describe 'POST #create_user' do
   context 'create a new user' do
     it 'should insert new user info correctly', :aggregate_failures do
       aggregate_failures 'successful_response' do
-        login_as admin_user
         post 'user/create', query: user
 
         expect(last_response.status).to eq(200)

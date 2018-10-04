@@ -1,7 +1,10 @@
 # Changelog
 
 ## HEAD Unreleased
-### Latest update: 2018-09-30
+### Latest update: 2018-10-02
+
+### Feature Request
+- [PR #17](https://github.com/napice/napice-api/pull/17) Add basic authentication to Roda [@vbrazo](https://github.com/vbrazo)
 
 ------------------------------------------------------------------------------
 ## v0.0.1 (2018-09-30)

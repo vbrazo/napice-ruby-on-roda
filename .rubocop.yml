@@ -1,4 +1,6 @@
 Metrics/LineLength:
+  Exclude:
+    - 'application/api/api_support.rb'
   Max: 100
 
 Metrics/MethodLength:

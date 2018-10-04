@@ -25,18 +25,8 @@ Dir[File.expand_path('support/**/*', __dir__)].each { |f| require f }
 module RSpecHelpers
   include Rack::Test::Methods
 
-  def login_as(user)
-    inject_header
-
-    Api.class_variable_set(:@@current_user, user)
-  end
-
   def app
     Rack::Builder.parse_file('config.ru').first
-  end
-
-  def inject_header
-    header 'AUTHORIZATION', %(Token token="abc", foo="bar")
   end
 
   def response_body

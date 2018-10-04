@@ -10,7 +10,7 @@ Dotenv.load
 
 file_path = File.dirname(__FILE__)
 
-%w(config middlewares api/models api/operations).each do |path|
+%w(config api/models api/operations).each do |path|
   Dir["#{file_path}/#{path}/**/*.rb"].each { |file| require file }
 end
 
