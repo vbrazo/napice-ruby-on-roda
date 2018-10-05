@@ -6,7 +6,9 @@
 /pkg/
 
 # Used by dotenv library to load environment variables.
-.env*
+.env
+.env.development
+.env.test
 
 ## Specific to RubyMotion:
 .dat*
