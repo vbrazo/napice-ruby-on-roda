@@ -3,6 +3,10 @@
 ## HEAD Unreleased
 ### Latest update: 2018-10-02
 
+### Chores
+- [PR #19](https://github.com/napice/napice-api/pull/19) Add .env.example [@vbrazo](https://github.com/vbrazo)
+- [PR #18](https://github.com/napice/napice-api/pull/18) Update roda-http-auth [@badosu](https://github.com/badosu)
+
 ### Feature Request
 - [PR #17](https://github.com/napice/napice-api/pull/17) Add basic authentication to Roda [@vbrazo](https://github.com/vbrazo)
 
