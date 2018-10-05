@@ -14,7 +14,11 @@ You can install the database by running `make build_database`.
 
 ### Install the dependencies
 
-Run `make install` to install the gems. 
+Run `make install` to install the gems.
+
+### Configurate your .env files
+
+Take a look at `.env.example` and configure your `.env`, `.env.test` and `.env.development` files.
 
 ## Development 
 
