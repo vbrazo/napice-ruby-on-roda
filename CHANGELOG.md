@@ -1,7 +1,7 @@
 # Changelog
 
 ## HEAD Unreleased
-### Latest update: 2018-10-02
+### Latest update: 2018-10-05
 
 ### Chores
 - [PR #19](https://github.com/napice/napice-api/pull/19) Add .env.example [@vbrazo](https://github.com/vbrazo)
