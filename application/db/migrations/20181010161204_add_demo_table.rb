@@ -5,9 +5,9 @@ Sequel.migration do
       String :first_name, null: false
       String :last_name, null: false
       String :email, null: false
-      String :phone
-      String :company_name
-      String :company_website
+      String :phone, null: false
+      String :company_name, null: false
+      String :company_website, null: false
       DateTime :created_at
       DateTime :updated_at
     end

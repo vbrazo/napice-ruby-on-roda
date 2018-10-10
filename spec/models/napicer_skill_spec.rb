@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe Api::Models::NapicerSkill, type: :model do
   context 'associations' do
     specify { is_expected.to have_many_to_one(:napicer) }
