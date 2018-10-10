@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe Api::Models::User, type: :model do
   context 'associations' do
     specify { is_expected.to have_one_to_one(:napicer) }

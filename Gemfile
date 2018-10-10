@@ -24,5 +24,5 @@ group :test do
   gem 'faker', '1.8.7'
   gem 'rack-test', '1.0.0'
   gem 'rspec', '3.7.0'
-  gem 'rspec_sequel_matchers', '0.4.0'
+  gem 'rspec_sequel_matchers', '0.5.0'
 end

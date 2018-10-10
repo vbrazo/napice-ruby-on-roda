@@ -8,6 +8,7 @@
 - [PR #18](https://github.com/napice/napice-api/pull/18) Update roda-http-auth [@badosu](https://github.com/badosu)
 
 ### Feature Request
+- [PR #21](https://github.com/napice/napice-api/pull/21) Add Experience, Education and Demo tables [@vbrazo](https://github.com/vbrazo)
 - [PR #20](https://github.com/napice/napice-api/pull/20) Add rake:version task [@vbrazo](https://github.com/vbrazo)
 - [PR #17](https://github.com/napice/napice-api/pull/17) Add basic authentication to Roda [@vbrazo](https://github.com/vbrazo)
 

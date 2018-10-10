@@ -24,7 +24,7 @@ namespace :db do
 
   desc 'Drop all database tables and re-run migrations'
   task :reset do
-    DB.tables.each { |table| DB.drop_table(table.to_sym) }
+    DB.tables.each { |table| DB.drop_table(table.to_sym, cascade: true) }
 
     Rake::Task['db:migrate'].execute
   end

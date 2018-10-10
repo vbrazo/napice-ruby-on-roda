@@ -2,11 +2,11 @@ class Api
   module Operations
     module User
       class Create
-        def initialize(args = {})
-          @args = args
+        def initialize(user:)
+          @user = user
         end
 
-        attr_reader :args
+        attr_reader :user
 
         def create
           Api::Models::User.create(user_hash)
@@ -16,7 +16,7 @@ class Api
 
         def user_hash
           {
-            email: args['email']
+            email: user['email']
           }
         end
       end
