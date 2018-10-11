@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe 'POST #demo' do
-  let(:admin_user) { FactoryBot.build(:user) }
   let(:demo) do
     {
       first_name: Faker::Name.first_name,
