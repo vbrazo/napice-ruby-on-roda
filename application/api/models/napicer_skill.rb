@@ -1,6 +1,8 @@
 class Api
   module Models
     class NapicerSkill < Sequel::Model(:napicer_skill)
+      plugin :json_serializer
+      
       many_to_one :napicer, class_name: 'Api::Models::Napicer', key: :napicer_id
       many_to_one :skill, class_name: 'Api::Models::Skill', key: :skill_id
 
