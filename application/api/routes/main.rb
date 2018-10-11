@@ -7,12 +7,7 @@ class ApiSupport
     r.on 'user' do
       r.on 'create' do
         r.post do
-          params = format_params
-
-          create_user_operation = Api::Operations::User::Create.new(user: params['query'])
-          result = create_user_operation.create
-
-          result.to_json
+          user_operation.create(user: format_params['query']).to_json
         end
       end
     end
@@ -20,12 +15,21 @@ class ApiSupport
     r.on 'company' do
       r.on 'demo' do
         r.post do
-          params = format_params
+          company_operation.demo(company: format_params['query']).to_json
+        end
+      end
+    end
 
-          company_operation = Api::Operations::Company::Demo.new(demo: params['query'])
-          result = company_operation.create
+    r.on 'napicer' do
+      r.on 'index' do
+        r.get do
+          napicer_operation.show_all
+        end
+      end
 
-          result.to_json
+      r.on 'show' do
+        r.get do
+          napicer_operation.show(napicer: format_params['query']).to_json
         end
       end
     end
@@ -35,5 +39,19 @@ class ApiSupport
     request.params
   rescue StandardError
     JSON.parse(request.body.read)
+  end
+
+  private
+
+  def company_operation
+    @company_operation ||= Api::Operations::Company.new
+  end
+
+  def napicer_operation
+    @napicer_operation ||= Api::Operations::Napicer.new
+  end
+
+  def user_operation
+    @user_operation ||= Api::Operations::User.new
   end
 end
