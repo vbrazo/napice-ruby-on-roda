@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe 'POST #create_user' do
-  let(:admin_user) { FactoryBot.build(:user) }
   let(:user) do
     {
       email: Faker::Internet.email

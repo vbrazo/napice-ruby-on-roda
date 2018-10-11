@@ -9,7 +9,7 @@ class Api
         attr_reader :user
 
         def create
-          Api::Models::User.create(user_hash)
+          Models::User.create(user_hash)
         end
 
         private
