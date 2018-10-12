@@ -1,6 +1,8 @@
 class Api
   module Models
     class Napicer < Sequel::Model(:napicer)
+      plugin :json_serializer
+
       many_to_many :skills,
                    class_name: 'Api::Models::Skill',
                    left_key: :napicer_id,
@@ -15,6 +17,7 @@ class Api
       one_to_many :napicer_skill,
                   class_name: 'Api::Models::NapicerSkill',
                   key: :skill_id
+      many_to_one :user, class_name: 'Api::Models::User', key: :user_id
 
       def validate
         super

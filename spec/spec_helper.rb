@@ -8,18 +8,16 @@ SimpleCov.start do
 end
 
 # Require gems and files
+require './application/api'
 require 'rspec/core'
 require 'rack/test'
-require './application/api'
+require 'database_cleaner'
 require 'faker'
 require 'factory_bot'
 require 'rspec_sequel_matchers'
 
 # Set locale en-US for faker
 Faker::Config.locale = 'en-US'
-
-# Require files inside the support folder
-Dir[File.expand_path('support/**/*', __dir__)].each { |f| require f }
 
 # Necessary to test a cascading rack app and middleware
 module RSpecHelpers
@@ -55,8 +53,21 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
+  # require factory_bot files
   config.before(:suite) do
     FactoryBot.definition_file_paths = %w(./spec/factories)
     FactoryBot.find_definitions
+  end
+
+  # set up database_cleaner
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:deletion)
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
   end
 end

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe 'POST #demo' do
   let(:demo) do
     {
