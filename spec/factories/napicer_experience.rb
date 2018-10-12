@@ -4,6 +4,6 @@ FactoryBot.define do
     location { Faker::Lorem.word }
     self_description { Faker::Lorem.word }
 
-    napicer
+    association :napicer
   end
 end

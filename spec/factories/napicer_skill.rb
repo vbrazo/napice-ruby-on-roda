@@ -3,7 +3,7 @@ FactoryBot.define do
     level { Faker::Lorem.word }
     years_of_experience { Faker::Number.number(1) }
 
-    napicer
-    skill
+    association :napicer
+    association :skill
   end
 end

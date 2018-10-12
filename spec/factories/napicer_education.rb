@@ -4,6 +4,6 @@ FactoryBot.define do
     degree { Faker::Educator.degree }
     self_description { Faker::Lorem.word }
 
-    napicer
+    association :napicer
   end
 end
