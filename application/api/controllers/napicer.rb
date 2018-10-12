@@ -1,5 +1,5 @@
 class Api
-  module Operations
+  module Controllers
     class Napicer
       def show(napicer:)
         Models::Napicer.first(id: napicer['id'])

@@ -38,14 +38,14 @@ class ApiSupport
   private
 
   def company_operation
-    @company_operation ||= Api::Operations::Company.new
+    @company_operation ||= Api::Controllers::Company.new
   end
 
   def napicer_operation
-    @napicer_operation ||= Api::Operations::Napicer.new
+    @napicer_operation ||= Api::Controllers::Napicer.new
   end
 
   def user_operation
-    @user_operation ||= Api::Operations::User.new
+    @user_operation ||= Api::Controllers::User.new
   end
 end

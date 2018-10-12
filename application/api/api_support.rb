@@ -10,5 +10,6 @@ class ApiSupport < Roda
 
   self.environment = ENV['ENVIRONMENT']
 
+  require 'pry'
   require_relative './routes/main.rb'
 end

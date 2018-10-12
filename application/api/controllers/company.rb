@@ -1,5 +1,5 @@
 class Api
-  module Operations
+  module Controllers
     class Company
       def demo(company:)
         Models::Demo.create(company)

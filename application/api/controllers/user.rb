@@ -1,5 +1,5 @@
 class Api
-  module Operations
+  module Controllers
     class User
       def create(user:)
         Models::User.create(user)
