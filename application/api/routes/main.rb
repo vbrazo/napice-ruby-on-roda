@@ -3,7 +3,9 @@ class ApiSupport
     r.on 'user' do
       r.on 'create' do
         r.post do
-          user_operation.create(user: format_params['query']).to_json
+          user_operation.create(user: format_params['query'])
+
+          success
         end
       end
     end
@@ -11,7 +13,9 @@ class ApiSupport
     r.on 'company' do
       r.on 'demo' do
         r.post do
-          company_operation.demo(company: format_params['query']).to_json
+          company_operation.demo(company: format_params['query'])
+
+          success
         end
       end
     end
@@ -25,7 +29,7 @@ class ApiSupport
 
       r.on 'show' do
         r.get do
-          napicer_operation.show(napicer: format_params['query']).to_json
+          JSON(napicer_operation.show(napicer: format_params['query']))
         end
       end
     end
@@ -33,6 +37,10 @@ class ApiSupport
 
   def format_params
     request.params
+  end
+
+  def success
+    { success: true }
   end
 
   private
