@@ -1,7 +1,10 @@
 # Changelog
 
 ## HEAD Unreleased
-### Latest update: 2018-10-05
+### Latest update: 2018-10-12
+
+------------------------------------------------------------------------------
+## v0.2.0 (2018-10-12)
 
 ### Chores
 - [PR #19](https://github.com/napice/napice-api/pull/19) Add .env.example [@vbrazo](https://github.com/vbrazo)
@@ -15,7 +18,7 @@
 - [PR #17](https://github.com/napice/napice-api/pull/17) Add basic authentication to Roda [@vbrazo](https://github.com/vbrazo)
 
 ------------------------------------------------------------------------------
-## v0.0.1 (2018-09-30)
+## v0.1.0 (2018-09-30)
 
 ### Bug/Fixes
 - [PR #4](https://github.com/napice/napice-api/pull/4) Upgrade rack protection gem [@vbrazo](https://github.com/vbrazo)
