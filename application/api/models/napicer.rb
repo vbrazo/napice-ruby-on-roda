@@ -2,7 +2,7 @@ class Api
   module Models
     class Napicer < Sequel::Model(:napicer)
       plugin :json_serializer
-      
+
       many_to_many :skills,
                    class_name: 'Api::Models::Skill',
                    left_key: :napicer_id,

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.describe 'POST #create_user' do
   let(:user) do
     {

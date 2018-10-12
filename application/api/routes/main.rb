@@ -1,9 +1,5 @@
 class ApiSupport
   route do |r|
-    r.root do
-      'Nothing Here'
-    end
-
     r.on 'user' do
       r.on 'create' do
         r.post do
@@ -37,8 +33,6 @@ class ApiSupport
 
   def format_params
     request.params
-  rescue StandardError
-    JSON.parse(request.body.read)
   end
 
   private

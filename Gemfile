@@ -20,6 +20,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'database_cleaner'
   gem 'factory_bot', '4.8.2'
   gem 'faker', '1.8.7'
   gem 'rack-test', '1.0.0'

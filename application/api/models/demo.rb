@@ -2,7 +2,7 @@ class Api
   module Models
     class Demo < Sequel::Model(:demo)
       plugin :json_serializer
-      
+
       def validate
         super
 

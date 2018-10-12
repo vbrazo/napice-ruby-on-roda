@@ -1,10 +1,8 @@
-require 'spec_helper'
-
 RSpec.describe 'GET #show' do
   context 'given valid params' do
-    let(:napicer) { FactoryBot.create(:napicer) }
-    let(:another_developers) { FactoryBot.create_list(:napicer, 20) }
-    
+    let(:napicer) { create(:napicer) }
+    let(:another_developers) { create_list(:napicer, 20) }
+
     it 'should return a specific napicer correctly', :aggregate_failures do
       aggregate_failures 'successful_response' do
         get 'napicer/show', query: { id: napicer.id }

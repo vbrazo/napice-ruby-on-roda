@@ -16,4 +16,3 @@ RSpec.describe Api::Operations::Company do
     end
   end
 end
-  
