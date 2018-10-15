@@ -11,6 +11,7 @@ RSpec.describe 'POST #create_user' do
         post 'user/create', query: user
 
         expect(last_response.status).to eq(200)
+        expect(response_body).to have_key(:success)
       end
 
       aggregate_failures 'correct_info' do
