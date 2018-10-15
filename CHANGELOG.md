@@ -11,6 +11,7 @@
 - [PR #18](https://github.com/napice/napice-api/pull/18) Update roda-http-auth [@badosu](https://github.com/badosu)
 
 ### Feature Request
+- [PR #24](https://github.com/napice/napice-api/pull/24) Add DSL for Operations tasks [@vbrazo](https://github.com/vbrazo)
 - [PR #23](https://github.com/napice/napice-api/pull/23) Add /napicer - index and show endpoints [@vbrazo](https://github.com/vbrazo)
 - [PR #22](https://github.com/napice/napice-api/pull/22) Add /companies/demo endpoint, its operations and specs [@vbrazo](https://github.com/vbrazo)
 - [PR #21](https://github.com/napice/napice-api/pull/21) Add Experience, Education and Demo tables [@vbrazo](https://github.com/vbrazo)
