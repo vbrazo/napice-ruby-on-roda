@@ -16,6 +16,7 @@ RSpec.describe 'POST #demo' do
         post 'company/demo', query: demo
 
         expect(last_response.status).to eq(200)
+        expect(response_body).to have_key(:success)
       end
 
       aggregate_failures 'correct_info' do

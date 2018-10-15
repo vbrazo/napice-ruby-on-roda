@@ -1,17 +1,4 @@
-RSpec.describe Api::Controllers::Napicer do
-  describe '#show_all' do
-    before do
-      create_list(:napicer, 30)
-      create_list(:napicer, 3)
-    end
-
-    it 'returns records successfully' do
-      records = subject.show_all
-
-      expect(records.count).to eq(33)
-    end
-  end
-
+RSpec.describe Api::Operations::Napicer::Show do
   describe '#show' do
     let(:napicer) { create(:napicer) }
     let(:params) do
@@ -21,7 +8,7 @@ RSpec.describe Api::Controllers::Napicer do
     end
 
     it 'returns record successfully' do
-      response = subject.show(napicer: params)
+      response = subject.call(napicer_hash: params)
 
       expect(response[:id]).to eq(napicer.id)
       expect(response[:first_name]).to eq(napicer.first_name)

@@ -1,5 +1,5 @@
-RSpec.describe Api::Controllers::User do
-  describe '#user' do
+RSpec.describe Api::Operations::User::Create do
+  describe '#create' do
     let(:user) do
       {
         'email' => Faker::Internet.email
@@ -8,7 +8,7 @@ RSpec.describe Api::Controllers::User do
 
     it 'adds record successfully' do
       expect do
-        subject.create(user: user)
+        subject.call(user_hash: user)
       end.to(change { Api::Models::User.count }.by(1))
     end
   end

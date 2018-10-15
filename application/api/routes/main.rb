@@ -3,9 +3,9 @@ class ApiSupport
     r.on 'user' do
       r.on 'create' do
         r.post do
-          user_operation.create(user: format_params['query'])
+          user_operation = Api::Operations::User::Create.new
 
-          success
+          user_operation.call(user_hash: format_params['query'])
         end
       end
     end
@@ -13,9 +13,9 @@ class ApiSupport
     r.on 'company' do
       r.on 'demo' do
         r.post do
-          company_operation.demo(company: format_params['query'])
+          company_operation = Api::Operations::Company::Demo.new
 
-          success
+          company_operation.call(company_hash: format_params['query'])
         end
       end
     end
@@ -23,37 +23,25 @@ class ApiSupport
     r.on 'napicer' do
       r.on 'index' do
         r.get do
-          napicer_operation.show_all
+          napicer_operation = Api::Operations::Napicer::ShowAll.new
+
+          napicer_operation.call
         end
       end
 
       r.on 'show' do
         r.get do
-          JSON(napicer_operation.show(napicer: format_params['query']))
+          napicer_operation = Api::Operations::Napicer::Show.new
+
+          JSON(napicer_operation.call(napicer_hash: format_params['query']))
         end
       end
     end
   end
 
-  def format_params
-    request.params
-  end
-
-  def success
-    { success: true }
-  end
-
   private
 
-  def company_operation
-    @company_operation ||= Api::Controllers::Company.new
-  end
-
-  def napicer_operation
-    @napicer_operation ||= Api::Controllers::Napicer.new
-  end
-
-  def user_operation
-    @user_operation ||= Api::Controllers::User.new
+  def format_params
+    request.params
   end
 end
