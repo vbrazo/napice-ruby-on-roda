@@ -1,4 +1,4 @@
-RSpec.describe Api::Controllers::Company do
+RSpec.describe Api::Operations::Company::Demo do
   describe '#demo' do
     let(:company) do
       {
@@ -13,7 +13,7 @@ RSpec.describe Api::Controllers::Company do
 
     it 'adds record successfully' do
       expect do
-        subject.demo(company: company)
+        subject.call(company_hash: company)
       end.to(change { Api::Models::Demo.count }.by(1))
     end
   end
