@@ -17,7 +17,7 @@ gem 'simplecov', '0.16.1'
 group :development, :test do
   gem 'awesome_print', '1.8.0'
   gem 'pry', '0.11.3'
-  gem 'rubocop'
+  gem 'rubocop', '0.58'
 end
 
 group :test do
