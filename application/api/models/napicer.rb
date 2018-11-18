@@ -22,7 +22,7 @@ class Api
       def validate
         super
 
-        validates_presence %i[first_name last_name username]
+        validates_presence %i(first_name last_name username)
       end
     end
   end

@@ -8,7 +8,7 @@ class Api
       def validate
         super
 
-        validates_presence %i[napicer_id title location self_description]
+        validates_presence %i(napicer_id title location self_description)
       end
     end
   end

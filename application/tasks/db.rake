@@ -31,9 +31,7 @@ namespace :db do
 
   desc 'Prints current schema version'
   task :version do
-    version = if DB.tables.include?(:schema_migrations)
-                DB[:schema_migrations].order(:filename.desc).first[:filename]
-              end || 0
+    version = DB[:schema_migrations].order(:filename.desc).first[:filename] if DB.tables.include?(:schema_migrations) || 0
 
     puts "Schema Version: #{version}"
   end
