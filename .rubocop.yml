@@ -1,5 +1,4 @@
 AllCops:
-  TargetRubyVersion: 2.5.1
   Exclude:
     - "db/schema.rb"
   UseCache: false
