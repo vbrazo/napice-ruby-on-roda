@@ -1,7 +1,10 @@
 # Changelog
 
 ## HEAD Unreleased
-### Latest update: 2018-10-12
+### Latest update: 2018-11-25
+
+### Bugs
+- [PR #26](https://github.com/napice/napice-api/pull/26) Update rack gem [@vbrazo](https://github.com/vbrazo)
 
 ------------------------------------------------------------------------------
 ## v0.2.0 (2018-10-12)
