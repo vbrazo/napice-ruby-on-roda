@@ -1,6 +1,6 @@
 # [Napice](http://napice.com) Ruby API [![Build Status](https://travis-ci.org/Napice/napice-ruby.svg?branch=master)](https://travis-ci.org/Napice/napice-ruby) [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/test_coverage)](https://codeclimate.com/github/Napice/napice-ruby/test_coverage)
 
-This is the Napice Ruby API. To understand more about our roadmap, please access [its repository](https://github.com/Napice/roadmap).
+This is the Napice Ruby API.
 
 ## Setting the project up
 
