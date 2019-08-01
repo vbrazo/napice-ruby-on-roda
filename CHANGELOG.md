@@ -6,6 +6,9 @@
 ### Bugs
 - [PR #26](https://github.com/napice/napice-api/pull/26) Update rack gem [@vbrazo](https://github.com/vbrazo)
 
+### Chores
+- [PR #25](https://github.com/napice/napice-api/pull/25) Add rules to .rubocop.yml [@vbrazo](https://github.com/vbrazo)
+
 ------------------------------------------------------------------------------
 ## v0.2.0 (2018-10-12)
 
