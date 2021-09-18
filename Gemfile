@@ -1,30 +1,30 @@
 source 'https://rubygems.org'
 
+gem 'dotenv', '2.7.6'
+gem 'pg', '1.2.3'
+gem 'puma', '~> 5.4.0'
+gem 'rack', '2.2.3'
+gem 'rack-protection', '~> 2.1.0'
+gem 'roda', '~> 3.48.0'
+gem 'roda-http-auth', '0.2.0'
+gem 'sequel', '~> 5.48.0'
+gem 'simplecov', '0.21.2'
+
 group :development do
   gem 'rake', '12.3.1'
 end
 
-gem 'dotenv', '2.5.0'
-gem 'pg', '1.2.3'
-gem 'puma', '3.12.0'
-gem 'rack', '>= 2.0.6'
-gem 'rack-protection', '1.5.5'
-gem 'roda', '3.13.0'
-gem 'roda-http-auth', '~> 0.2.0'
-gem 'sequel', '4.35.0'
-gem 'simplecov', '0.16.1'
-
 group :development, :test do
-  gem 'awesome_print', '1.8.0'
-  gem 'pry', '0.11.3'
-  gem 'rubocop', '0.58'
+  gem 'awesome_print', '1.9.2'
+  gem 'pry', '0.14.1'
+  gem 'rubocop', '~> 1.21.0'
 end
 
 group :test do
-  gem 'database_cleaner'
-  gem 'factory_bot', '4.8.2'
-  gem 'faker', '1.8.7'
-  gem 'rack-test', '1.0.0'
-  gem 'rspec', '3.7.0'
+  gem 'database_cleaner', '2.0.1'
+  gem 'factory_bot', '6.2.0'
+  gem 'faker', '2.19.0'
+  gem 'rack-test', '1.1.0'
+  gem 'rspec', '3.10.0'
   gem 'rspec_sequel_matchers', '0.5.0'
 end
