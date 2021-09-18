@@ -5,7 +5,7 @@ group :development do
 end
 
 gem 'dotenv', '2.5.0'
-gem 'pg', '0.18.4'
+gem 'pg', '1.2.3'
 gem 'puma', '3.12.0'
 gem 'rack', '>= 2.0.6'
 gem 'rack-protection', '1.5.5'
