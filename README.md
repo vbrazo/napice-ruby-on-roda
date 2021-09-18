@@ -1,6 +1,6 @@
-# [Napice](http://napice.com) Ruby API [![Build Status](https://travis-ci.org/Napice/napice-ruby.svg?branch=master)](https://travis-ci.org/Napice/napice-ruby) [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/test_coverage)](https://codeclimate.com/github/Napice/napice-ruby/test_coverage)
+# Napice Ruby API [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability)
 
-This is the Napice Ruby API.
+This is the Napice Ruby API using the [Roda Web Framework](https://github.com/jeremyevans/roda).
 
 ## Setting the project up
 
@@ -20,7 +20,7 @@ Run `make install` to install the gems.
 
 Take a look at `.env.example` and configure your `.env`, `.env.test` and `.env.development` files.
 
-## Development 
+## Development
 
 ### Launch the console
 
@@ -32,13 +32,14 @@ To run the API tests, you should run `bundle exec rspec spec`.
 
 ## Built With
 
+* Roda
+* Roda Auth
 * PostgreSQL (with ruby Sequel ORM)
 * Rspec
 * Faker
 * FactoryBot
 * CSRF and SESSION
 * TOKEN AUTH
-* Heroku
 
 ## Contributing Guidelines
 
