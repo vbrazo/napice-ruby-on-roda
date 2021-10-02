@@ -6,7 +6,7 @@ end
 
 gem 'dotenv', '2.5.0'
 gem 'pg', '0.18.4'
-gem 'puma', '3.12.0'
+gem 'puma', '4.3.8'
 gem 'rack', '>= 2.0.6'
 gem 'rack-protection', '1.5.5'
 gem 'roda', '3.13.0'
