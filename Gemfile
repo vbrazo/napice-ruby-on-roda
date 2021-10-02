@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem 'rake', '12.3.1'
+  gem 'rake', '12.3.3'
 end
 
 gem 'dotenv', '2.5.0'
