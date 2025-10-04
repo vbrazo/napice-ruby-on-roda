@@ -2,36 +2,43 @@ class Api
   module Operations
     class Base
       class Builder
-        attr_reader :attributes
+        attr_reader :steps
 
         def initialize
-          @attributes = []
+          @steps = []
+        end
+
+        def step(method_name)
+          @steps << method_name
         end
 
         def method_missing(method_name, *args, &block)
-          if method_name.is_a? Symbol
-            @attributes << args[0]
+          if method_name == :step && args.length == 1
+            @steps << args[0]
           else
             super
           end
         end
 
         def respond_to_missing?(method_name, *args)
-          method_name.is_a?(Symbol) || super
+          method_name == :step || super
         end
       end
 
       def run(input = nil, &block)
-        response = []
+        response = nil
 
         builder = Builder.new
         builder.instance_eval(&block) if block_given?
 
-        builder.attributes.each do |value|
-          response = if value == :success || input.empty?
-                       send(value)
+        builder.steps.each do |step_name|
+          # Check if the method accepts parameters
+          method_obj = method(step_name)
+          
+          response = if method_obj.arity == 0 || (input.nil? || input.empty?)
+                       send(step_name)
                      else
-                       send(value, input)
+                       send(step_name, **input)
                      end
         end
 

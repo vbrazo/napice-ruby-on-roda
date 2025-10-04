@@ -4,7 +4,7 @@ AllCops:
   UseCache: false
 
 # Supports --auto-correct
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Description: Align the parameters of a method call if they span more than one line.
   StyleGuide: https://github.com/rubocop-hq/ruby-style-guide#no-double-indent
   Enabled: true
@@ -128,7 +128,7 @@ Layout/DotPosition:
   EnforcedStyle: trailing
 
 # Supports --auto-correct
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   Description: Checks the indentation of the first key in a hash literal.
   Enabled: true
   EnforcedStyle: consistent
@@ -171,7 +171,7 @@ Lint/UnderscorePrefixedVariableName:
   Description: Do not use prefix `_` for a variable that is used.
   Enabled: false
 
-Lint/UnneededSplatExpansion:
+Lint/RedundantSplatExpansion:
   Enabled: false
 
 Lint/Loop:
@@ -232,7 +232,7 @@ Metrics/PerceivedComplexity:
   Enabled: false
   Max: 7
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Description: >-
               Checks for method parameter names that contain capital letters,
               end in numbers, or do not meet a minimal length.
@@ -240,156 +240,6 @@ Naming/UncommunicativeMethodParamName:
 
 Naming/VariableNumber:
   Enabled: false
-
-# Supports --auto-correct
-Performance/RedundantMerge:
-  Description: Use Hash#[]=, rather than Hash#merge! with a single key-value pair.
-  Reference: https://github.com/JuanitoFatas/fast-ruby#hashmerge-vs-hash-code
-  Enabled: false
-
-# Supports --auto-correct
-Performance/StringReplacement:
-  Description: Use `tr` instead of `gsub` when you are replacing the same number of
-    characters. Use `delete` instead of `gsub` when you are deleting characters.
-  Reference: https://github.com/JuanitoFatas/fast-ruby#stringgsub-vs-stringtr-code
-  Enabled: false
-
-Rails/Blank:
-  Description: 'Enforce using `blank?` and `present?`.'
-  Enabled: true
-  # Convert checks for `nil` or `empty?` to `blank?`
-  NilOrEmpty: true
-  # Convert usages of not `present?` to `blank?`
-  NotPresent: true
-  # Convert usages of `unless` `present?` to `if` `blank?`
-  UnlessPresent: true
-
-Rails/CreateTableWithTimestamps:
-  Description: Checks the migration for which timestamps are not included when creating a new table.
-  Enabled: true
-
-Rails/Date:
-  Description: Checks the correct usage of date aware methods, such as Date.today, Date.current
-    etc.
-  Enabled: false
-  EnforcedStyle: flexible
-  SupportedStyles:
-  - strict
-  - flexible
-
-# Supports --auto-correct
-Rails/Delegate:
-  Description: Prefer delegate method for delegations.
-  Enabled: false
-
-Rails/DelegateAllowBlank:
-  Enabled: false
-
-Rails/EnvironmentComparison:
-  Description: "Favor `Rails.env.production?` over `Rails.env == 'production'`"
-  Enabled: true
-
-Rails/Exit:
-  Description: >-
-                  Favor `fail`, `break`, `return`, etc. over `exit` in
-                  application or library code outside of Rake files to avoid
-                  exits during unit testing or running in production.
-  Enabled: false
-
-# Supports --auto-correct
-Rails/FindBy:
-  Description: Prefer find_by over where.first.
-  Enabled: false
-  Include:
-  - app/models/**/*.rb
-
-# Supports --auto-correct
-Rails/FindEach:
-  Description: Prefer all.find_each over all.find.
-  Enabled: false
-  Include:
-  - app/models/**/*.rb
-
-Rails/HasAndBelongsToMany:
-  Description: Prefer has_many :through to has_and_belongs_to_many.
-  Enabled: false
-  Include:
-  - app/models/**/*.rb
-
-Rails/HasManyOrHasOneDependent:
-  Enabled: false
-
-Rails/LexicallyScopedActionFilter:
-  Description: Checks that methods specified in the filter's `only` or `except` options are
-    explicitly defined in the controller.
-  StyleGuide: 'https://github.com/rubocop-hq/rails-style-guide#lexically-scoped-action-filter'
-  Enabled: false
-
-Rails/NotNullColumn:
-  Enabled: false
-
-Rails/Output:
-  Description: Checks for calls to puts, print, etc.
-  Enabled: false
-  Include:
-  - app/**/*.rb
-  - config/**/*.rb
-  - db/**/*.rb
-  - lib/**/*.rb
-
-Rails/OutputSafety:
-  Description: 'The use of `html_safe` or `raw` may be a security risk.'
-  Enabled: false
-
-# Supports --auto-correct
-Rails/PluralizationGrammar:
-  Description: Checks for incorrect grammar when using methods like `3.day.ago`.
-  Enabled: false
-
-Rails/Presence:
-  Description: Checks code that can be written more easily using `Object#presence` defined by
-    Active Support.
-  Enabled: false
-
-Rails/Present:
-  Description: 'Enforce using `blank?` and `present?`.'
-  Enabled: true
-  NotNilAndNotEmpty: true
-  # Convert checks for not `nil` and not `empty?` to `present?`
-  NotBlank: true
-  # Convert usages of not `blank?` to `present?`
-  UnlessBlank: true
-  # Convert usages of `unless` `blank?` to `if` `present?`
-
-Rails/RedundantReceiverInWithOptions:
-  Description: 'Checks for redundant receiver in `with_options`.'
-  Enabled: true
-
-Rails/RequestReferer:
-  Description: 'Use consistent syntax for request.referer.'
-  Enabled: false
-
-Rails/ScopeArgs:
-  Description: Checks the arguments of ActiveRecord scopes.
-  Enabled: true
-  Include:
-  - app/models/**/*.rb
-
-Rails/TimeZone:
-  Description: Checks the correct usage of time zone aware methods.
-  StyleGuide: https://github.com/rubocop-hq/rails-style-guide#time
-  Reference: http://danilenko.org/2012/7/6/rails_timezones
-  Enabled: false
-  EnforcedStyle: flexible
-  SupportedStyles:
-  - strict
-  - flexible
-
-Rails/Validation:
-  Description: Use validates :attribute, hash of validations.
-  Enabled: false
-  Include:
-  - app/models/**/*.rb
 
 Security/Eval:
   Description: The use of eval represents a serious security risk.
@@ -429,15 +279,6 @@ Style/ArrayJoin:
   Description: Use Array#join instead of Array#*.
   StyleGuide: https://github.com/rubocop-hq/ruby-style-guide#array-join
   Enabled: true
-
-Style/BracesAroundHashParameters:
-  Description: Enforce braces style around hash parameters.
-  Enabled: false
-  EnforcedStyle: no_braces
-  SupportedStyles:
-  - braces
-  - no_braces
-  - context_dependent
 
 # Supports --auto-correct
 Style/ClassMethods:
@@ -492,9 +333,7 @@ Style/FrozenStringLiteralComment:
   Description: Add the frozen_string_literal comment to the top of files to help transition
     from Ruby 2.3.0 to Ruby 3.0.
   Enabled: false
-  EnforcedStyle: when_needed
   SupportedStyles:
-  - when_needed
   - always
 
 Style/HashSyntax:
@@ -726,6 +565,6 @@ Style/StringLiteralsInInterpolation:
   - double_quotes
 
 # Supports --auto-correct
-Style/UnneededInterpolation:
+Style/RedundantInterpolation:
   Description: Checks for strings that are just an interpolated expression.
   Enabled: false

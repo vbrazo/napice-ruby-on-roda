@@ -1,6 +1,8 @@
-# Napice Ruby API [![Maintainability](https://api.codeclimate.com/v1/badges/e53c8b4e2454290843b4/maintainability)](https://codeclimate.com/github/Napice/napice-ruby/maintainability)
+# [Napice](http://napice.com) Ruby API 
 
-This is the Napice Ruby API using the [Roda Web Framework](https://github.com/jeremyevans/roda).
+![CI](https://github.com/Napice/napice-ruby/workflows/CI/badge.svg) 
+
+This is the Napice Ruby API built with Roda framework.
 
 ## Setting the project up
 
@@ -30,8 +32,21 @@ You can use the application programmatically via Ruby environment. To access the
 
 To run the API tests, you should run `bundle exec rspec spec`.
 
+### Run the linter
+
+To check code quality with RuboCop, run `bundle exec rubocop`.
+
 ## Built With
 
+<<<<<<< HEAD
+* **Framework:** Roda (Ruby web framework)
+* **Database:** PostgreSQL with Sequel ORM
+* **Testing:** RSpec, Faker, FactoryBot
+* **Code Quality:** RuboCop, SimpleCov
+* **Security:** Rack Protection, CSRF and SESSION protection, HTTP Auth
+* **CI/CD:** GitHub Actions
+* **Deployment:** Heroku-ready
+=======
 * Roda
 * Roda Auth
 * PostgreSQL (with ruby Sequel ORM)
@@ -40,6 +55,7 @@ To run the API tests, you should run `bundle exec rspec spec`.
 * FactoryBot
 * CSRF and SESSION
 * TOKEN AUTH
+>>>>>>> master
 
 ## Contributing Guidelines
 

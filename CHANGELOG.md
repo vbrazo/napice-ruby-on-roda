@@ -1,7 +1,67 @@
 # Changelog
 
 ## HEAD Unreleased
-### Latest update: 2018-11-25
+### Latest update: 2025-10-04
+
+### Major Improvements
+- Migrated from TravisCI/CircleCI to GitHub Actions for CI/CD
+- Updated all gem dependencies to more recent stable versions:
+  - Ruby 3.x compatible versions
+  - Roda: 3.48 → 3.96
+  - Sequel: 5.48 → 5.97
+  - Puma: 5.4 → 6.6
+  - Rack: 2.2.3 → 2.2.18 (security update)
+  - Rack Protection: 2.1 → 3.2
+  - RSpec: 3.10 → 3.13
+  - RuboCop: 1.21 → 1.81
+  - Faker: 2.19 → 3.5
+  - And other dependencies updated to latest stable versions
+- Enhanced code quality with improved error handling throughout the application
+- Added comprehensive test coverage for routes and operations
+- Improved model validations and associations
+- All tests passing with 86.79% code coverage
+
+### Features
+- Added global error handler with environment-specific error responses
+- Implemented proper HTTP status codes for all API responses (400, 404, 422, 500)
+- Added 404 handler for undefined routes
+- Enhanced Operations Base class with better DSL implementation
+- Added input validation to all operations
+
+### Enhancements
+- Fixed model associations (Napicer, User, Skill relationships)
+- Added timestamps plugin to all models
+- Added email format validation for User and Demo models
+- Added URL validation for Demo company_website field
+- Added unique constraints (username, email, skill names)
+- Added foreign key and uniqueness validations to join tables
+- Improved error messages and validation feedback
+- Added bidirectional associations for many-to-many relationships
+
+### Tests
+- Added comprehensive route tests with error case coverage
+- Added Base operations class test suite
+- Enhanced existing operation tests with error handling scenarios
+- Added validation and edge case tests for all operations
+
+### Bug Fixes
+- Fixed incorrect foreign keys in Napicer model associations
+- Fixed Base operations class logic for step execution
+- Corrected validates_presence syntax across all models
+- Fixed method_missing implementation in Base::Builder
+- Fixed compatibility issues with newer Roda and Sequel versions
+- Fixed database_cleaner integration for Sequel
+- Fixed timestamp serialization in JSON responses
+- Fixed step execution to properly handle methods with different arities
+
+### Chores
+- Updated README with new CI badge and improved documentation
+- Removed deprecated TravisCI badge
+- Updated "Built With" section with better organization
+- Added RuboCop linting instructions to README
+
+------------------------------------------------------------------------------
+## v0.2.0 (2018-11-25)
 
 ### Bugs
 - [PR #26](https://github.com/napice/napice-api/pull/26) Update rack gem [@vbrazo](https://github.com/vbrazo)
