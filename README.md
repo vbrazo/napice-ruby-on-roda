@@ -22,7 +22,7 @@ Run `make install` to install the gems.
 
 Take a look at `.env.example` and configure your `.env`, `.env.test` and `.env.development` files.
 
-## Development 
+## Development
 
 ### Launch the console
 
@@ -38,6 +38,7 @@ To check code quality with RuboCop, run `bundle exec rubocop`.
 
 ## Built With
 
+<<<<<<< HEAD
 * **Framework:** Roda (Ruby web framework)
 * **Database:** PostgreSQL with Sequel ORM
 * **Testing:** RSpec, Faker, FactoryBot
@@ -45,6 +46,16 @@ To check code quality with RuboCop, run `bundle exec rubocop`.
 * **Security:** Rack Protection, CSRF and SESSION protection, HTTP Auth
 * **CI/CD:** GitHub Actions
 * **Deployment:** Heroku-ready
+=======
+* Roda
+* Roda Auth
+* PostgreSQL (with ruby Sequel ORM)
+* Rspec
+* Faker
+* FactoryBot
+* CSRF and SESSION
+* TOKEN AUTH
+>>>>>>> master
 
 ## Contributing Guidelines
 

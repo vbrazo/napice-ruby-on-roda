@@ -48,7 +48,12 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.6.2)
+    pg (1.6.2-aarch64-linux)
+    pg (1.6.2-aarch64-linux-musl)
+    pg (1.6.2-arm64-darwin)
     pg (1.6.2-x86_64-darwin)
+    pg (1.6.2-x86_64-linux)
+    pg (1.6.2-x86_64-linux-musl)
     prism (1.5.1)
     pry (0.15.2)
       coderay (~> 1.1)
@@ -116,8 +121,13 @@ GEM
     uri (1.0.3)
 
 PLATFORMS
+  aarch64-linux
+  aarch64-linux-musl
+  arm64-darwin
   ruby
-  x86_64-darwin-19
+  x86_64-darwin
+  x86_64-linux
+  x86_64-linux-musl
 
 DEPENDENCIES
   awesome_print (~> 1.9)
@@ -141,4 +151,4 @@ DEPENDENCIES
   simplecov (~> 0.22)
 
 BUNDLED WITH
-   2.2.27
+   2.6.9

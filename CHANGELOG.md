@@ -49,6 +49,10 @@
 - Fixed Base operations class logic for step execution
 - Corrected validates_presence syntax across all models
 - Fixed method_missing implementation in Base::Builder
+- Fixed compatibility issues with newer Roda and Sequel versions
+- Fixed database_cleaner integration for Sequel
+- Fixed timestamp serialization in JSON responses
+- Fixed step execution to properly handle methods with different arities
 
 ### Chores
 - Updated README with new CI badge and improved documentation
