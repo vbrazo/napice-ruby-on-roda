@@ -16,5 +16,32 @@ RSpec.describe Api::Operations::Company::Demo do
         subject.call(company_hash: company)
       end.to(change { Api::Models::Demo.count }.by(1))
     end
+
+    it 'returns success status' do
+      result = subject.call(company_hash: company)
+      expect(result).to eq({ success: true })
+    end
+
+    context 'with invalid input' do
+      it 'raises error when company_hash is nil' do
+        expect do
+          subject.call(company_hash: nil)
+        end.to raise_error(ArgumentError, 'company_hash cannot be empty')
+      end
+
+      it 'raises error when company_hash is empty' do
+        expect do
+          subject.call(company_hash: {})
+        end.to raise_error(ArgumentError, 'company_hash cannot be empty')
+      end
+    end
+
+    context 'with missing required fields' do
+      it 'raises validation error' do
+        expect do
+          subject.call(company_hash: { 'first_name' => 'Test' })
+        end.to raise_error(Sequel::ValidationFailed)
+      end
+    end
   end
 end

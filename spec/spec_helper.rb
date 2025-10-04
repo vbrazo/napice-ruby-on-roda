@@ -1,3 +1,7 @@
+# Load test environment first
+require 'dotenv'
+Dotenv.load('.env.test')
+
 # Add Simplecov configuration
 require 'simplecov'
 SimpleCov.start do
@@ -11,7 +15,7 @@ end
 require './application/api'
 require 'rspec/core'
 require 'rack/test'
-require 'database_cleaner'
+require 'database_cleaner/sequel'
 require 'faker'
 require 'factory_bot'
 require 'rspec_sequel_matchers'
@@ -61,12 +65,12 @@ RSpec.configure do |config|
 
   # set up database_cleaner
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:deletion)
+    DatabaseCleaner[:sequel].strategy = :transaction
+    DatabaseCleaner[:sequel].clean_with(:truncation)
   end
 
   config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
+    DatabaseCleaner[:sequel].cleaning do
       example.run
     end
   end

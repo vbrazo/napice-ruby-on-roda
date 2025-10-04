@@ -46,5 +46,12 @@ RSpec.describe Api::Operations::Napicer::Show do
       expect(response[:created_at]).to eq(napicer.created_at)
       expect(response[:updated_at]).to eq(napicer.updated_at)
     end
+
+    context 'when napicer does not exist' do
+      it 'returns nil' do
+        response = subject.call(napicer_hash: { 'id' => 99999 })
+        expect(response).to be_nil
+      end
+    end
   end
 end

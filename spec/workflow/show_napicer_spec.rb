@@ -47,8 +47,8 @@ RSpec.describe 'GET #show' do
         expect(response[:introduction]).to eq(napicer.introduction)
         expect(response[:nationality]).to eq(napicer.nationality)
         expect(response[:position]).to eq(napicer.position)
-        expect(response[:created_at]).to eq(napicer.created_at)
-        expect(response[:updated_at]).to eq(napicer.updated_at)
+        expect(response[:created_at]).to eq(napicer.created_at.to_s)
+        expect(response[:updated_at]).to eq(napicer.updated_at.to_s)
       end
     end
   end

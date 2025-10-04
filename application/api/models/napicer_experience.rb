@@ -2,13 +2,15 @@ class Api
   module Models
     class NapicerExperience < Sequel::Model(:napicer_experience)
       plugin :json_serializer
+      plugin :timestamps, update_on_create: true
 
       many_to_one :napicer, class_name: 'Api::Models::Napicer', key: :napicer_id
 
       def validate
         super
 
-        validates_presence %i(napicer_id title location self_description)
+        validates_presence [:napicer_id, :title, :location, :self_description]
+        validates_integer :napicer_id
       end
     end
   end
